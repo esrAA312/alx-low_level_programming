@@ -13,10 +13,11 @@
 unsigned int binary_to_uint(const char *b)
 {
 	int i;
+
 	for (i = 0; b[i]; i++)
 	{
 
-		if (b[i] < '0' || b[i] > '1'|| !b)
+		if (b[i] < '0' || b[i] > '1' || !b)
 
 			return (0);
 
@@ -30,7 +31,7 @@ unsigned int binary_to_uint(const char *b)
 
 			n /= 10;
 
-			dec = dec + (rem * (2^t));
+			dec = dec + (rem * (2 ^ t));
 
 			++t;
 		}
