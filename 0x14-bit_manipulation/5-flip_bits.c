@@ -14,6 +14,15 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	return (countSetBits(Result));
 }
+
+/**
+ * flip_bits - counts the number of bits to change
+ * to get from one number to another
+ * @num: num
+ *
+ * Return: count
+ */
+
 int countSetBits(int num)
 {
 	int count = 0;
