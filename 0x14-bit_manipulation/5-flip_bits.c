@@ -16,11 +16,11 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 }
 
 /**
- * flip_bits - counts the number of bits to change
- * to get from one number to another
- * @num: num
+ * countSetBits - counts the number of set bits (1s)
+ * @num: the integer for which set bits are counted
  *
- * Return: count
+ * Return:
+ *   The count of set bits in the binary representation of 'num'.
  */
 
 int countSetBits(int num)
