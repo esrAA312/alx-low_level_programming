@@ -22,7 +22,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
  *   The count of set bits in the binary representation of 'num'.
  */
 
-int countSetBits(int num)
+int countSetBits(unsigned long int num)
 {
 	unsigned int count = 0;
 
