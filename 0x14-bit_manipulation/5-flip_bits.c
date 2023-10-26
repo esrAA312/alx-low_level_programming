@@ -9,7 +9,7 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	int Result = n ^ m;
+	unsigned int Result = n ^ m;
 
 	return (countSetBits(Result));
 }
@@ -24,7 +24,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 int countSetBits(int num)
 {
-	int count = 0;
+	unsigned int count = 0;
 
 	while (num)
 	{
