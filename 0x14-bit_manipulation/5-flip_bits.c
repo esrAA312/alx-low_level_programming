@@ -9,7 +9,7 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int Result = n ^ m;
+	int Result = n ^ m;
 
 	return (countSetBits(Result));
 }
@@ -22,7 +22,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
  *   The count of set bits in the binary representation of 'num'.
  */
 
-int countSetBits(unsigned long int num)
+unsigned int countSetBits(int num)
 {
 	unsigned int count = 0;
 
