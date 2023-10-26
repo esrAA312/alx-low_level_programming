@@ -13,7 +13,7 @@
 unsigned int binary_to_uint(const char *b)
 {
 
-	int i, num, rem, x, base = 1, n;
+	unsigned int i, num, rem, x, base = 1, n;
 	unsigned int int_num = 0;
 
 	if (!b)
