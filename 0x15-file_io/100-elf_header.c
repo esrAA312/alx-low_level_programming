@@ -29,7 +29,7 @@ void check_e(unsigned char *e_ident)
 {
 	int x;
 
-	for (x = 0;x < 4;x++)
+	for (x = 0; x < 4; x++)
 	{
 		if (e_ident[x] != 127 &&
 				e_ident[x] != 'E' &&
@@ -74,16 +74,17 @@ void print_(unsigned int type, unsigned char *e)
  * Description: If the file is not an ELF File or
  * the function fails - exit code 98.
  */
-int main(int _attribute((unused_)) argc, char *argv[])
+int main(int ac, char **av)
 {
 	Elf64_Ehdr *der;
 	int op, re;
 	(void)re;
+	(void)ac;
 
-	op = open(argv[1], O_RDONLY);
+	op = open(av[1], O_RDONLY);
 	if (op == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", av[1]);
 		exit(98);
 	}
 	der = malloc(sizeof(Elf64_Ehdr));
