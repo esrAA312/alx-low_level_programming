@@ -7,7 +7,7 @@
 #include <stdlib.h>
 void close_e(int elf);
 void check_e(unsigned char *e_ident);
-void print(unsigned int type, unsigned char *e);
+void print_(unsigned int type, unsigned char *e);
 /**
  * close_e - Closes an ELF file.
  * @elf: The file descriptor of the ELF file.
