@@ -15,3 +15,4 @@ void print_abi(unsigned char *e_ident);
 void print_osabi(unsigned char *e_ident);
 void print_type(unsigned int e_type, unsigned char *e_ident);
 void close_elf(int elf);
+print_entry(header->e_entry, header->e_ident);
