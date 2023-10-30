@@ -66,8 +66,8 @@ void print_(unsigned int type, unsigned char *e)
 /**
  * main - Displays the information contained in the
  * ELF der at the start of an ELF file.
- * @argc: The number of arguments supplied to the program.
- * @argv: An array of pointers to the arguments.
+ * @ac: The number of arguments supplied to the program.
+ * @av: An array of pointers to the arguments.
  *
  * Return: 0 on success.
  *
