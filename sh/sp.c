@@ -22,7 +22,7 @@ char *x = "allocation error in split_line: tokensi\n";
 		exit(EXIT_FAILURE);
 	}
 	token = strtok(line, EXPECTED_DELIM);
-	while (token != NULL)
+	for (; token != NULL; )
 	{
 		/* handle comments */
 		if (token[0] == '#')

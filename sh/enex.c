@@ -8,14 +8,13 @@
  */
 int env(char **arg)
 {
-	int k = 0;
+	int k;
 	(void)(**arg);
 
-	while (environ[k])
+	for (k = 0; environ[k]; k++)
 	{
 		write(STDOUT_FILENO, environ[k], _strlen(environ[k]));
 		write(STDOUT_FILENO, "\n", 1);
-		k++;
 	}
 	return (-1);
 }

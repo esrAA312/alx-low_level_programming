@@ -17,7 +17,7 @@ int create_process(char **args)
 		/* child process */
 		if (execvp(args[0], args) == -1)
 		{
-			perror("error in new_process: child process");
+			perror("./shell");
 		}
 		exit(EXIT_FAILURE);
 	}
