@@ -18,7 +18,7 @@ char *get_line(void)
 		if (feof(stdin)) /* test for the eof */
 		{
 			free(line); /* avoid memory leaks when ctrl + d */
-			return(NULL); /* we recieved an eof */
+			exit(EXIT_SUCCESS); /* we recieved an eof */
 		}
 		else
 		{

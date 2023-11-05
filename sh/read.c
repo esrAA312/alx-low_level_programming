@@ -22,7 +22,7 @@ char *y = "reallocation error in read_stream\n";
 		if (ch == EOF)
 		{
 			free(line);
-			return (NULL);
+		exit(EXIT_SUCCESS);
 		}
 		else if (ch == '\n')
 		{
