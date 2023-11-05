@@ -21,7 +21,7 @@ void none_interactive(void)
 		if (check(arg) == 0)
 		{
 			continue; }
-
+		handle_cd(arg);
 		re = my_fork(arg);
 		if (re >= 0)
 		{

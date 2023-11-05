@@ -12,6 +12,8 @@
 #include <unistd.h>
 #define BUFFER_SIZE 1024
 #define MAX_COMMAND_LENGTH 100
+#define MAX_COMMAND 1024
+void handle_cd(char **arg);
 void _puts(char *str);
 int _putchar(char c);
 char *read_line(void);
