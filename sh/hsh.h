@@ -23,11 +23,15 @@ void _puts(char *str);
 int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
 char **str_tok(char str[BUFFER_SIZE], char separate);
-
+void error_exit(char *arg_v);
+char *my_itoa(int num, char str[], int base);
+void reverse(char str[], int length);
+int _atoi(char *s);
 /* shellLOOP.c */
 void interactive(void);
 void none_interactive(void);
-
+void cd(char **arg);
+int _strncmp(char *str1, char *str2, int n);
 /* interactive.c */
 char *read_line(void);
 char **split(char *line);
@@ -43,6 +47,6 @@ char *get_line(void);
 int env(char **arg);
 extern char **environ;
 /*exit.c*/
-int own_exit(char **args);
+int own_exit(char **exit_args);
 #endif
 
