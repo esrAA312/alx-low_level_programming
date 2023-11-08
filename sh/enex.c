@@ -43,10 +43,6 @@ int exec_arg(char **arg)
 	{
 		return (-1);
 	}
-	if (_strncmp(arg[0], "cd", 2) == 0)
-	{ cd(arg);
-		free(arg);
-		return(0);}
 	for (; j < sizeof(built_in_func) / sizeof(char *); j++)
 	{
 		if (_strcmp(arg[0], built_in_func[j]) == 0)
