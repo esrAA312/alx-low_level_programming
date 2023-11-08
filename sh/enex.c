@@ -31,11 +31,13 @@ int exec_arg(char **arg)
 {
 	char *built_in_func[] = {
 		"env",
-		"exit"
+		"exit",
+		"cd"
 	};
 	int (*builtin_address[])(char **) = {
 		&env,
-		&own_exit
+		&own_exit,
+		&cd
 	};
 	unsigned long int j = 0;
 

@@ -1,6 +1,6 @@
 #include "hsh.h"
 
-void cd(char **arg)
+int cd(char **arg)
 {
 	char cwd[1024];
 	char *path;
@@ -10,7 +10,7 @@ void cd(char **arg)
 		char *home = getenv("HOME");
 		if (home == NULL) {
 			fprintf(stderr, "HOME environment variable not set\n");
-			return;
+			return(-1);
 		}
 		if (chdir(home) == -1) {
 			perror("chdir");
@@ -19,7 +19,7 @@ void cd(char **arg)
 		char *oldpwd = getenv("OLDPWD");
 		if (oldpwd == NULL) {
 			fprintf(stderr, "OLDPWD environment variable not set\n");
-			return;
+			return(-1);
 		}
 		write(STDOUT_FILENO, "oldpwd", 6);
 		write(STDOUT_FILENO, "\n", 1);
@@ -38,4 +38,5 @@ void cd(char **arg)
 	if (getcwd(cwd, sizeof(cwd)) != NULL) {
 		setenv("PWD", cwd, 1);
 	}
+	  return(-1);
 }

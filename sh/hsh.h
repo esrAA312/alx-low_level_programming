@@ -30,7 +30,7 @@ int _atoi(char *s);
 /* shellLOOP.c */
 void interactive(void);
 void none_interactive(void);
-void cd(char **arg);
+int cd(char **arg);
 int _strncmp(char *str1, char *str2, int n);
 /* interactive.c */
 char *read_line(void);
