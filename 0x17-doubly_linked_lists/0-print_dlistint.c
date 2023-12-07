@@ -1,4 +1,4 @@
-nclude "lists.h"
+#include "lists.h"
 #include <stdio.h>
 /**
  * print_dlistint - prints all the elements of a linked list
