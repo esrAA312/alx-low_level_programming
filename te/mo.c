@@ -5,6 +5,7 @@
  * @av: opcode file
  * Return: 0
  */
+int sq_flag = 0;
 int main(int ac, char **av)
 {
 	stack_t *stack;
