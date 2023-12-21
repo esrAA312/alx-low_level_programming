@@ -19,7 +19,6 @@ void sorted_list(shash_table_t *ht, shash_node_t *new_node)
 	do {
 		if (strcmp(new_node->key, sbucket->key) < 0)
 		{
-			new_node->snext = sbucket;
 			new_node->sprev = sbucket->sprev;
 
 			if (!sbucket->sprev)
