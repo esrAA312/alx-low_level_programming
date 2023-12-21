@@ -19,6 +19,7 @@ void sorted_list(shash_table_t *ht, shash_node_t *new_node)
 	do {
 		if (strcmp(new_node->key, sbucket->key) < 0)
 		{
+			new_node->snext = sbucket;
 			new_node->sprev = sbucket->sprev;
 
 			if (!sbucket->sprev)
@@ -51,7 +52,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 
 	table = calloc(1, sizeof(shash_table_t));
 	if (table == NULL)
-		return (NULL);
+		return;;
 
 	table->size = size;
 	table->array = calloc(size, sizeof(shash_node_t *));
