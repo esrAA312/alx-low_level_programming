@@ -52,7 +52,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 
 	table = calloc(1, sizeof(shash_table_t));
 	if (table == NULL)
-		return;;
+		return (NULL);
 
 	table->size = size;
 	table->array = calloc(size, sizeof(shash_node_t *));
@@ -212,5 +212,6 @@ void shash_table_delete(shash_table_t *ht)
 			free(aux_free);
 		}
 	}
-
+	free(ht->array);
+	free(ht);
 }
