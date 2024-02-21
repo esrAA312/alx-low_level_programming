@@ -1,0 +1,25 @@
+# Using variables and going to the next level to remove and control files 
+
+CC = gcc
+SRC = school.c main.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm -f
+
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+.PHONY: all clean oclean fclean re
+
+all: $(OBJ) m.h
+	$(CC) $(OBJ) -o $(NAME)
+
+clean:
+	$(RM) *~ $(OBJ) $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: oclean all
