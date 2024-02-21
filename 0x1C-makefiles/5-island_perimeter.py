@@ -1,27 +1,20 @@
 #!/usr/bin/python3
+"""Defines an island perimeter measuring function."""
+
 
 def island_perimeter(grid):
-    """
-    Calculates the perimeter of the island described in the grid.
+    """Return the perimiter of an island"""
+    rows, cols = len(grid), len(grid[0])
+    island_size, shared_edges = 0, 0
 
-    Args:
-        grid (list of list of int): 2D grid representing 
-    """
-    perimeter = 0
-    height = len(grid)
-    for i in range(height):
-        for j in range(len(grid[0])):
+    for i in range(rows):
+        for j in range(cols):
             if grid[i][j] == 1:
-                perimeter += 4  # Each land cell contributes 4 to the perimeter
-
-                # Check adjacent cells and subtract 1 for each adjacent land cell
-                if i > 0 and grid[i - 1][j] == 1:
-                    perimeter -= 1
-                if i < len(grid) - 1 and grid[i + 1][j] == 1:
-                    perimeter -= 1
+                island_size += 1
                 if j > 0 and grid[i][j - 1] == 1:
-                    perimeter -= 1
-                if j < len(grid[0]) - 1 and grid[i][j + 1] == 1:
-                    perimeter -= 1
+                    shared_edges += 1
+                if i > 0 and grid[i - 1][j] == 1:
+                    shared_edges += 1
 
-    return perimeter
+    total_perimeter = island_size * 4 - shared_edges * 2
+    return total_perimeter
