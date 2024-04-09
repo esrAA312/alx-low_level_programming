@@ -33,7 +33,7 @@ int binary_search(int *array, size_t size, int value);
 		printf("Searching in array: ");
 		while (tmpes <= lastes)
 		{
-			printf("%d", arr[tmpes]);
+			printf("%d", array[tmpes]);
 			if (tmpes != lastes)
 				printf(", ");
 			tmpes++;
