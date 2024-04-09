@@ -40,7 +40,7 @@ int binary_search(int *array, size_t size, int value);
 		}
 		printf("\n");
 
-		mid = calculate_midpoint(begines, lastes);
+		m = midpoint(begines, lastes);
 		if (array[m] == value)
 			return (m);
 		else if (array[m] < value)
