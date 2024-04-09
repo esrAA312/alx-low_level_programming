@@ -1,18 +1,11 @@
-#ifndef _SORTING_ALGOS_H_
-#define _SORTING_ALGOS_H_
+#ifndef SEARCH_ALGOS_H
+#define SEARCH_ALGOS_H
 
-#include <stdlib.h>
 #include <stdio.h>
-
-/**
- * struct listint_s - singly linked list
- *
- * @n: Integer
- * @index: Index of the node in the list
- * @next: Pointer to the next node
- *
- * Description: singly linked list node structure
- * for Holberton project
- */
+#include <math.h>
+#include <stdlib.h>
 int linear_search(int *array, size_t size, int value);
+int binary_search(int *array, size_t size, int value);
+int jump_search(int *array, size_t size, int value);
+
 #endif
