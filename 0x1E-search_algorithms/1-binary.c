@@ -19,7 +19,7 @@ int midpoint(int staes, int enes)
  * @value The target value to be searched for
  * Return: The index of the target value, or -1 if not found
  */
-int binary_search(int *array, size_t size, int value);
+int binary_search(int *array, size_t size, int value)
 {
 	int begines = 0, lastes = (int)size - 1;
 	int m = 0, tmpes = 0;
