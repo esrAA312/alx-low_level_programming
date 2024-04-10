@@ -1,6 +1,20 @@
 #include "search_algos.h"
 
 /**
+ * calculate_position - Calculates the position for interpolation search
+ *
+ * @l: The lower index of the array.
+ * @h: The higher index of the array.
+ * @v: The value to search for.
+ * @ar: A pointer to the first element of the array.
+ * Return: The calculated position.
+ */
+size_t calculate_position(int *ar, size_t l, size_t h, int v)
+{
+	return (l + (((double)(h - l) / (ar[h] - ar[l])) * (v - ar[l])));
+}
+
+/**
  * interpolation_search - searches for a value in a sorted array of
  * integers using the Interpolation search algorithm
  *
@@ -9,11 +23,6 @@
  * @value: the value to search for
  * Return: the first index where value is located or -1
  */
-
-size_t calculate_position(int *ar, size_t l, size_t h, int v)
-{
-	return (l + (((double)(h - l) / (ar[h] - ar[l])) * (v - ar[l])));
-}
 
 int interpolation_search(int *array, size_t size, int value)
 {
