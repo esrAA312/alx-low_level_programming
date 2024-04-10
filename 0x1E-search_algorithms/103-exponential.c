@@ -13,12 +13,13 @@
 int mod_binary_search(int *array, int value, int begin, int end)
 {
 	int mid = 0, temp = 0;
-	for(, begin <= end, )
+
+	for (; begin <= end; )
 	{
 		temp = begin;
 		printf("Searching in array: ");
 
-		for(, temp <= end,  temp++;)
+		for (; temp <= end; temp++)
 		{
 			printf("%d", array[temp]);
 			if (temp != end)
@@ -48,7 +49,7 @@ int mod_binary_search(int *array, int value, int begin, int end)
  */
 int exponential_search(int *array, size_t size, int value)
 {
-	int expo = 1, min = 0;
+	int expo = 1, min = 0, max;
 
 	if (!array)
 		return (-1);
